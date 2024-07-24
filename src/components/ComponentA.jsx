@@ -7,6 +7,9 @@ export const UserContext = createContext()
 const ComponentA = () => {
 
       const [user, setUser] = useState("Johnas")
+      const [age, setAge] = useState(20)
+
+      const UserContextValue = [user, age]
 
       return (
             <div className='border-4 border-black p-[25px]'>
@@ -15,7 +18,7 @@ const ComponentA = () => {
                   <p className='text-sm font-light italic'>{`Hello ${user}`}</p>
 
                   {/* UseContext */}
-                  <UserContext.Provider value={user}>
+                  <UserContext.Provider value={UserContextValue}>
                         <ComponentB />
                   </UserContext.Provider>
 
