@@ -3,7 +3,7 @@ import { UserContext } from './ComponentA.jsx'
 
 const ComponentD = () => {
 
-      const { user, age } = useContext(UserContext);
+      const [user, age] = useContext(UserContext);
 
       return (
             <div className='border-4 border-black p-[25px]'>
